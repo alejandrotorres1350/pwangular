@@ -1,0 +1,23 @@
+<div style="text-align:center">
+  <h1>
+    Menu de Productos
+  </h1>
+  
+</div>
+<ul>
+  <li>
+    <a [routerLink]="['/productos/menu/agregar']" routerLinkActive="router-link-active">Agregar Producto</a>
+  </li>
+  <li>
+    <a [routerLink]="['/productos/menu/eliminar']" routerLinkActive="router-link-active">Eliminar Producto</a>
+  </li>
+  <li>
+    <a [routerLink]="['/productos/menu/consultar']" routerLinkActive="router-link-active">Consultar Productos</a>
+  </li>
+  <li>
+      <a [routerLink]="['/productos/menu/actualizar']" routerLinkActive="router-link-active">Actualizar Productos</a>
+    </li>
+</ul>
+
+<router-outlet></router-outlet>
+

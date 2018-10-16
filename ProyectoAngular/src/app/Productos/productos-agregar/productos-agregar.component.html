@@ -1,0 +1,13 @@
+<h2>
+  Agregar Producto
+</h2>
+<form (ngSubmit)="agregarproducto()">
+  <label for="txtnombre">Nombre</label>
+    <input type="text" id= "nombrep" name= "txtnombre" [(ngModel)]="producto.nombre"><br>
+  <label for="txtcode">Codigo</label>
+    <input type="text" id= "codigop" name= "txtcode" [(ngModel)]="producto.codigo"><br>
+  <label for="txtmed">Medida</label>
+    <input type="text" id= "medp" name= "txtmed" [(ngModel)]="producto.medida"><br>
+  <button type="submit">Agregar</button>
+</form>
+

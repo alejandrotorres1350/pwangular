@@ -1,0 +1,7 @@
+<div class="component">
+  <ul>
+    <li *ngFor="let producto of productos; let i = index">{{producto.Codigo}} - {{producto.Nombre}} - {{producto.Medida}}
+      <button (click)="deleteItem(i)"> Eliminar </button>
+    </li>
+  </ul>
+</div>

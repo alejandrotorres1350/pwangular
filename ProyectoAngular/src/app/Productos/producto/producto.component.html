@@ -1,0 +1,17 @@
+<div class="component">
+    <div *ngIf="producto">    
+
+      <form (ngSubmit)="actualizarproducto()">
+          <div>Codigo: {{producto.Codigo}} ->
+          <input type="text" id= "codigop" name= "txtcode" [(ngModel)]="productoaux.codigo"></div>
+
+          <div>Nombre: {{producto.Nombre}} ->
+            <input type="text" id= "nombrep" name= "txtnombre" [(ngModel)]="productoaux.nombre"></div>            
+          <div>Medida: {{producto.Medida}} ->
+          <input type="text" id= "medp" name= "txtmed" [(ngModel)]="productoaux.medida"></div>
+          <button type="submit">Guardar Cambios</button>
+        </form>
+        <div><a [routerLink]="['/productos/menu/consultar']" 
+          routerLinkActive="router-link-active">Volver</a>
+  </div>
+</div>
