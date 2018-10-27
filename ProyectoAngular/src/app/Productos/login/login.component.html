@@ -1,0 +1,26 @@
+<div style="text-align:center">
+  <div class="component">
+    <div>
+      <h1>Acceder</h1>
+      <form (ngSubmit)="doLogin()">
+        <div>
+            <label for="txtnombre">Username: </label>
+            <input type="text" [(ngModel)]="user" name="user"><br>
+        </div>
+        <div>
+            <label for="txtnombre">Password: </label>
+            <input type="text" [(ngModel)]="password" name="pass"><br>
+        </div>
+        <br>
+        <div>
+            <button type="submit" id="login">Login</button>
+            
+        </div>
+            <button (click)="logout()">logout</button>  
+      </form>
+      
+      <h3>{{message}}</h3>
+    </div>        
+  </div>
+</div>
+

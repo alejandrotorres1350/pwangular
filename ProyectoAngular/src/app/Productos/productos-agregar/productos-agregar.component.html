@@ -1,13 +1,22 @@
-<h2>
-  Agregar Producto
-</h2>
-<form (ngSubmit)="agregarproducto()">
-  <label for="txtnombre">Nombre</label>
-    <input type="text" id= "nombrep" name= "txtnombre" [(ngModel)]="producto.nombre"><br>
-  <label for="txtcode">Codigo</label>
-    <input type="text" id= "codigop" name= "txtcode" [(ngModel)]="producto.codigo"><br>
-  <label for="txtmed">Medida</label>
-    <input type="text" id= "medp" name= "txtmed" [(ngModel)]="producto.medida"><br>
-  <button type="submit">Agregar</button>
-</form>
+<div style="text-align:center">
+  <h2> Agregar Producto</h2>
+  <form (ngSubmit)="agregarproducto()">
+    <label for="txtnombre">Nombre</label>
+      <input type="text" id= "nombrep" name= "txtnombre" [(ngModel)]="producto.nombre"><br>
+    <br>
+    <label for="txtcode">Codigo</label>
+      <input type="text" id= "codigop" name= "txtcode" [(ngModel)]="producto.codigo"><br>
+    <br>
+    <label for="txtmed">Medida</label>
+      <input type="text" id= "medp" name= "txtmed" [(ngModel)]="producto.medida"><br>
+    <br>
+    <label for="txtpre">Precio</label>
+      <input type="text" id= "preciop" name= "txtpre" [(ngModel)]="producto.precio"><br>
+    <br>
+    <button type="submit">Agregar</button>
+    <br><br>
+    <button [routerLink]="['/productos/menu']" routerLinkActive="router-link-active">Volver</button>
+  </form>
+</div>
+
 

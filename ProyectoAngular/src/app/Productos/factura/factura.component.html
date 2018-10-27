@@ -1,0 +1,27 @@
+<div style="text-align:center">
+  <h2>Factura de {{venta.nombreCliente}}</h2>
+  <div class="component">
+      <div>    
+        <table>
+            <tr>
+              <th>Producto</th>
+              <th>Precio</th>
+              <th>Cantidad</th>
+              <th>Total Parcial</th>
+            </tr>
+            <tr *ngFor="let cp of cantprod">
+              <td> {{cp.producto.nombre}} </td>
+              <td> {{cp.producto.precio}}</td>
+              <td> {{cp.cantidad}}</td>
+              <td> {{cp.cantidad*cp.producto.precio}}</td>
+            </tr>
+            <tr>
+              <td>Total de la compra</td>
+              <td>{{agregarmonto()}}</td>
+            </tr>
+          </table>
+        <button [routerLink]="['/productos/menu']" 
+        routerLinkActive="router-link-active">Aceptar</button>
+    </div>
+  </div>
+</div>

@@ -14,10 +14,11 @@
       <td> {{producto.nombre}}</td>
       <td> {{producto.unidadMedida}}</td>
       <td> {{producto.precio}}</td>
-      <td><button [routerLink]="['/productos/menu/view', producto.id]" routerLinkActive="router-link-active">Abrir</button></td>
+      <td><button [routerLink]="['/productos/menu/cantidad', producto.id]" routerLinkActive="router-link-active">Añadir al carrito</button> </td>
     </tr>
   </table>
   <br>
   <br>
+  
   <button [routerLink]="['/productos/menu']" routerLinkActive="router-link-active">Volver</button>
 </div>

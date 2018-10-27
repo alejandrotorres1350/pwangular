@@ -1,7 +1,9 @@
-<div class="component">
+<div class="component" style="text-align:center">
+    <h2>Lista de Productos</h2>
     <ul>
-      <li *ngFor="let producto of productos">{{producto.Codigo}} - {{producto.Nombre}} - {{producto.Medida}}
-          <a [routerLink]="['/productos/menu/view', producto.id]" routerLinkActive="router-link-active">Abrir</a>
+      <li *ngFor="let producto of productos">{{producto.sku}} - {{producto.nombre}} - {{producto.unidadMedida}}
+          <button [routerLink]="['/productos/menu/view', producto.id]" routerLinkActive="router-link-active">Abrir</button>
       </li>
     </ul>
+    <button [routerLink]="['/productos/menu']" routerLinkActive="router-link-active">Volver</button>
   </div>

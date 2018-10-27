@@ -1,6 +1,10 @@
+import { VentaService } from './../shared/venta.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductoService } from '../shared/producto.service';
 import { Producto } from '../shared/producto';
+import { Venta } from '../shared/venta';
+import { Productocantidad2 } from '../shared/productocantidad2';
+import { ProdcantService } from '../shared/prodcant.service';
 
 @Component({
   selector: 'app-productos-consultar',
@@ -9,9 +13,11 @@ import { Producto } from '../shared/producto';
 })
 export class ProductosConsultarComponent implements OnInit {
   productos: Producto[] = [];
-  constructor(private service: ProductoService) { }
+  ventas: Venta[] = [];
+  productocants: Productocantidad2[] = [];
+  constructor(private service: ProductoService, private pcservice: ProdcantService) { }
 
   ngOnInit() {
-    this.productos = this.service.findAll();
+    this.service.findAll().subscribe(productos => this.productos = productos);
   }
 }

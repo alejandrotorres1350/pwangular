@@ -1,7 +1,9 @@
-<div class="component">
+<div class="component" style="text-align:center">
+  <h2>Eliminar Producto</h2>
   <ul>
-    <li *ngFor="let producto of productos; let i = index">{{producto.Codigo}} - {{producto.Nombre}} - {{producto.Medida}}
+    <li *ngFor="let producto of productos; let i = index">{{producto.sku}} - {{producto.nombre}} - {{producto.unidadMedida}}
       <button (click)="deleteItem(i)"> Eliminar </button>
     </li>
   </ul>
+  <button [routerLink]="['/productos/menu']" routerLinkActive="router-link-active">Volver</button>
 </div>

@@ -1,23 +1,30 @@
 <div style="text-align:center">
-  <h1>
-    Menu de Productos
-  </h1>
-  
-</div>
-<ul>
-  <li>
-    <a [routerLink]="['/productos/menu/agregar']" routerLinkActive="router-link-active">Agregar Producto</a>
-  </li>
-  <li>
-    <a [routerLink]="['/productos/menu/eliminar']" routerLinkActive="router-link-active">Eliminar Producto</a>
-  </li>
-  <li>
-    <a [routerLink]="['/productos/menu/consultar']" routerLinkActive="router-link-active">Consultar Productos</a>
-  </li>
-  <li>
-      <a [routerLink]="['/productos/menu/actualizar']" routerLinkActive="router-link-active">Actualizar Productos</a>
+  <h2>Menu de Productos</h2>
+  <ul>
+    <li>
+      <button [routerLink]="['/productos/menu/agregar']" routerLinkActive="router-link-active"> Agregar</button>
     </li>
-</ul>
-
+    <br>
+    <li>
+        <button [routerLink]="['/productos/menu/consultar']" routerLinkActive="router-link-active">Productos</button>
+    </li>
+    <br>
+    <li>
+      <button [routerLink]="['/productos/menu/comprar']" routerLinkActive="router-link-active">Carrito de Compras</button>
+    </li>
+    <br>
+    <li>
+      <button [routerLink]="['/productos/menu/factura']" routerLinkActive="router-link-active">Generar Factura</button>
+    </li>
+    <br>
+    <!--<li>
+      <button [routerLink]="['/productos/menu/eliminar']" routerLinkActive="router-link-active">Eliminar Producto</button>
+    </li>
+    <br>    
+    <li>
+        <button [routerLink]="['/productos/menu/actualizar']" routerLinkActive="router-link-active">Actualizar Productos</button>
+    </li>-->
+  </ul>
+</div>
 <router-outlet></router-outlet>
 

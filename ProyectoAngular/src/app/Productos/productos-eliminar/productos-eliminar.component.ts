@@ -12,12 +12,19 @@ export class ProductosEliminarComponent implements OnInit {
   constructor(private service: ProductoService) { }
 
   ngOnInit() {
-    this.productos = this.service.findAll();
+    this.service.findAll()
+    .subscribe(productos => this.productos = productos);
   }
 
   deleteItem(index: number) {
-    console.log('Component index ' + index);
-    this.service.delete(index);
-  }
 
+    this.service.delete(index)
+      .subscribe(
+        data => {
+          console.log(data);
+        },
+        error => console.log(error));
+    // console.log('Component index ' + index);
+    // this.service.delete(index);
+  }
 }

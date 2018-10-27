@@ -1,17 +1,45 @@
-<div class="component">
-    <div *ngIf="producto">    
+<div style="text-align:center">
+  <h2>Informacion de producto</h2>
+  <div class="component">
+      <div *ngIf="producto">    
+        <form (ngSubmit)="actualizarproducto()">
+            <table>
+                <tr>
+                  <th>Campos</th>
+                  <th>Actual</th>
+                  <th>Cambio</th>
+                </tr>
+                <tr>
+                  <td> Codigo</td>
+                  <td> {{producto.sku}}</td>
+                  <td> <input type="text" id= "codigop" name= "txtcode" value="productoaux.codigo" [(ngModel)]="productoaux.codigo"></td>
+                </tr>
 
-      <form (ngSubmit)="actualizarproducto()">
-          <div>Codigo: {{producto.Codigo}} ->
-          <input type="text" id= "codigop" name= "txtcode" [(ngModel)]="productoaux.codigo"></div>
+                <tr>
+                    <td> Nombre</td>
+                    <td> {{producto.nombre}}</td>
+                    <td> <input type="text" id= "nombrep" name= "txtnombre" value="productoaux.nombre" [(ngModel)]="productoaux.nombre"></td>
+                </tr>
 
-          <div>Nombre: {{producto.Nombre}} ->
-            <input type="text" id= "nombrep" name= "txtnombre" [(ngModel)]="productoaux.nombre"></div>            
-          <div>Medida: {{producto.Medida}} ->
-          <input type="text" id= "medp" name= "txtmed" [(ngModel)]="productoaux.medida"></div>
-          <button type="submit">Guardar Cambios</button>
-        </form>
-        <div><a [routerLink]="['/productos/menu/consultar']" 
-          routerLinkActive="router-link-active">Volver</a>
+                <tr>
+                    <td> Medida</td>
+                    <td> {{producto.unidadMedida}}</td>
+                    <td> <input type="text" id= "medp" name= "txtmed" value="productoaux.medida" [(ngModel)]="productoaux.medida"></td>
+                </tr>
+
+                <tr>
+                    <td> Precio</td>
+                    <td> {{producto.precio}}</td>
+                    <td> <input type="text" id= "preciop" name= "txtpre" value="productoaux.precio" [(ngModel)]="productoaux.precio"></td>
+                </tr>
+              </table>
+            <button type="submit">Guardar Cambios</button>
+            <button (click)="eliminarproducto()" [routerLink]="['/productos/menu/consultar']" 
+            routerLinkActive="router-link-active"> Eliminar </button>
+          </form>
+            <br>
+          <div><button [routerLink]="['/productos/menu/consultar']" 
+            routerLinkActive="router-link-active">Volver</button>
+    </div>
   </div>
 </div>

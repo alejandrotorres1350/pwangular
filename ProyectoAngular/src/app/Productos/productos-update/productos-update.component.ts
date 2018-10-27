@@ -13,7 +13,8 @@ export class ProductosUpdateComponent implements OnInit {
   constructor(private service: ProductoService) { }
 
   ngOnInit() {
-    this.productos = this.service.findAll();
+    this.service.findAll()
+    .subscribe(productos => this.productos = productos);
   }
 
 }
